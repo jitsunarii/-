@@ -1,0 +1,203 @@
+/*全体　共通
+最初から設定してあるので特に変更
+しなくても大丈夫です♪
+-----------------*/
+body {
+	font-family: Roboto, "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+	line-height: 1.75;
+	font-size: 16px;
+	width: 100%;
+	text-align: center;
+}
+
+
+/*　パディングをサイズ内側にする処理　*/
+* {
+	padding: 0;
+	margin: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*ーーーーーーーーーーー*/
+/*この下から記述*/
+/*ーーーーーーーーーーー*/
+
+
+
+
+/*セカイを変えるチーズを作ろう
+---------------------*/
+#splash {
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	background: url(../img/splashcheeze.jpeg);
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	text-align: center;
+	color: #edf507;
+
+}
+
+.title_box {
+	background: url(../img/mainbg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	animation-name: fadeInAnime;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	opacity: 0;
+}
+
+
+/*cheeseacademy
+---------------------*/
+.header_box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	animation-name: fadeInAnime;
+	animation-duration: 5s;
+	animation-fill-mode: forwards;
+	opacity: 0;
+
+}
+
+.header_box_img {
+	position: relative;
+	width: 25%;
+}
+
+.header_img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	/* width="200"  */
+	/* height="200" */
+}
+
+.header_box_text {
+	width: 75%;
+	position: relative;
+}
+
+.header_text {
+	position: absolute;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+
+.head_text {
+	font-size: 35px;
+	font-weight: bold;
+}
+
+.about_box_text {
+	animation-name: fadeInAnime;
+	animation-duration: 5s;
+	animation-fill-mode: forwards;
+	opacity: 0;
+	margin-top: 80px;
+}
+
+.img-frame {
+	animation-name: fadeInAnime;
+	animation-duration: 5s;
+	animation-fill-mode: forwards;
+	opacity: 0;
+}
+
+.max_size {
+	width: 100%;
+}
+
+
+
+
+/*画像スライド
+---------------------*/
+
+/*本格的な農園
+---------------------*/
+.course_box_header {
+	animation-name: fadeInAnime;
+	animation-duration: 5s;
+	animation-fill-mode: forwards;
+	opacity: 0;
+}
+
+.course_box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	animation-name: fadeInAnime;
+	animation-duration: 5s;
+	animation-fill-mode: forwards;
+	opacity: 0;
+}
+
+@keyframes fadeInAnime {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+.course_box_img {
+	width: 50%;
+}
+
+.course_box_text {
+	width: 50%;
+}
+
+.news_box_img {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+}
+
+/* mapの横幅指定要素 */
+.access_widmap {
+	/* ここに横幅を指定 */
+	max-width: 100%;
+}
+
+/* mapを囲う要素 */
+.access_map {
+	position: relative;
+	width: 100%;
+	height: 0;
+	/* 比率を4:3指定 */
+	padding-top: 20%;
+
+}
+
+/* mapのiframe */
+.access_map iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+p {
+	margin: 10px;
+}
+
+/*
+---------------------*/

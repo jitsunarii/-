@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>STREET FIGHTER</title>
+    <link rel="stylesheet" type="text/css" href="css/kakuge-.css" />
+    <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
+
+    <style>
+        /* クリッカブルな要素としてスタイルを設定 */
+        .clickable {
+            cursor: pointer;
+            /* マウスを重ねるとポインターになる */
+        }
+
+        /* フェードイン/アウトのアニメーション */
+        /* .fade-in {
+            animation: fadeIn 0.5s ease-in-out forwards;
+        }
+
+        .fade-out {
+            animation: fadeOut 0.5s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+            }
+        } */
+
+        .content {
+            /* background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgb(252, 252, 252)), url(../img/kakutou-back.jpeg);
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: white; */
+            /* background-image: url(../img/kakutou-back.jpeg);
+            /* 背景画像のサイズや表示位置を調整 */
+            /* background-size: cover; */
+            /* background-position: center; */
+            /* height: 1080px; */
+            /* width: 1800px; */
+
+            /* テキストの色を白に設定 */
+            color: black;
+            /* テキストの位置を中央に設定 */
+            text-align: center;
+            /* 背景画像のアニメーション設定 */
+            animation-name: fadeIn;
+            /* fadeInという名前のアニメーションを適用 */
+            animation-duration: 3s;
+            /* アニメーションの持続時間（秒） */
+            animation-delay: 0s;
+            /* アニメーションの開始遅延時間（秒） */
+            animation-fill-mode: forwards;
+            /* アニメーションが終了した後の状態を保持 */
+        }
+
+
+
+        /* 背景画像のフェードインアニメーション */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                /* 透明から始まる */
+            }
+
+            to {
+                opacity: 1;
+                /* 完全に不透明になる */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div class="content_text">
+            <h1>STREET <br> FIGHTER</h1>
+        </div>
+    </div>
+    <!-- <div class="CHARACTER_all_box">
+        <h2>CHARACTER</h2>
+    </div>
+    <div class="HISTORY_all_box">
+        <h2>HISTORY</h2>
+    </div> -->
+    <div class="SPECIALS_all_box">
+        <div class="SPECIALS_header_box">
+            <h2>SPECIALS</h2>
+        </div>
+        <div class="SPECIALS_all_contents_box">
+            <div class="SPECIALS_box">
+                <div class="SPECIALS_text_box">
+                    <div class="SPECIALS_name_box">
+                        <h3 class="SPECIALS_text">波動拳</h3>
+                    </div>
+                    <div class="command_box">
+                        <p class="command">コマンド：↓↘︎→+P</p>
+                    </div>
+                </div>
+                <div class="SPECIALS_img_box">
+                    <img src="./img/hadoken.webp" alt="" class="SPECIALS_img">
+                </div>
+            </div>
+            <div class="SPECIALS_box">
+                <div class="SPECIALS_img_box">
+                    <img src="./img/syoryuken.jpeg" alt="" class="SPECIALS_img">
+                </div>
+                <div class="SPECIALS_text_box">
+                    <div class="SPECIALS_name_box">
+                        <h3 class="SPECIALS_text">昇竜拳</h3>
+                    </div>
+                    <div class="command_box"></div>
+                    <p class="command">コマンド：→↓↘︎+P</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="SPECIALARTS_all_box">
+        <div class="SPECIALARTS_header_box">
+            <h2>SUPER ARTS</h2>
+        </div>
+        <div class="SPECIALS_box">
+            <div class="SPECIALS_img_box">
+                <img src="./img/shinkuhadoken.jpeg" alt="" class="SPECIALS_img">
+            </div>
+            <div class="SPECIALS_text_box">
+                <div class="SPECIALS_name_box">
+                    <h3 class="SPECIALS_text">真空波動拳</h3>
+                </div>
+                <div class="command_box">
+                    <p class="command">コマンド：↓↘︎→↓↘︎→+K</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <!-- <input type="text" id="keyCode"> -->
+    <!-- <script>
+        document.addEventListener('keydown', function (ev) {
+            document.getElementById('keyCode').value = ev.keyCode;
+        });
+    </script> -->
+    <script>
+        // 波動拳
+        // (function () {
+        //     'use strict';
+
+        //     var
+        //         // 入力受付時間（1.5秒）
+        //         wait = 200,
+
+        //         // standby = false の時は入力を受け付けない
+        //         standby = true,
+
+        //         // コマンドのキーpコード
+        //         command2 = [40, 39, 80],
+
+        //         length = command2.length,
+        //         index = 0,
+        //         timer = null;
+
+        //     document.addEventListener('keydown', function (ev) {
+
+        //         clearTimeout(timer);
+
+        //         if (standby && ev.keyCode === command2[index]) {
+        //             index++;
+
+        //             if (index >= length) {
+        //                 // standby = false;
+        //                 index = 0;
+
+        //                 alert("波動拳");
+        //                 // 全てのコマンドを入力したら何かする
+        //             }
+        //             else {
+        //                 timer = setTimeout(function () {
+        //                     index = 0;
+        //                 }, wait);
+
+        //                 // コマンド入力を間違えたらリセット
+
+        //             }
+        //         } else {
+        //             index = 0;
+        //         }
+
+
+        //     });
+        // })();
+        // 昇竜拳
+        (function () {
+            'use strict';
+
+            let
+                // 入力受付時間（1.5秒）
+                wait = 200,
+
+                // standby = false の時は入力を受け付けない
+                standby = true,
+
+                // コマンドのキーpコード
+                command2 = [38, 39, 40, 80],
+
+                length = command2.length,
+                index = 0,
+                timer = null;
+
+            document.addEventListener('keydown', function (ev) {
+
+                clearTimeout(timer);
+
+                if (standby && ev.keyCode === command2[index]) {
+                    index++;
+
+                    if (index >= length) {
+                        // standby = false;
+                        index = 0;
+
+                        alert("昇竜拳");
+                        // 全てのコマンドを入力したら何かする
+                    }
+                    else {
+                        timer = setTimeout(function () {
+                            index = 0;
+                        }, wait);
+
+                        // コマンド入力を間違えたらリセット
+
+                    }
+                } else {
+                    index = 0;
+                }
+
+
+            });
+        })();
+        // コマンド入力を間違えたらリセット
+        // 真空波動拳
+        (function () {
+            'use strict';
+            let
+                // 入力受付時間（0.2秒）
+                wait = 200,
+
+                // standby = false の時は入力を受け付けない
+                standby = true,
+
+                // コマンドのキーコード
+                command3 = [40, 39, 40, 39, 75,],
+
+                length = command3.length,
+                index = 0,
+                timer = null;
+
+            document.addEventListener('keydown', function (ev) {
+                clearTimeout(timer);
+                if (standby && ev.keyCode === command3[index]) {
+                    index++;
+
+                    if (index >= length) {
+                        index = 0;
+                        standby = false;
+
+                        document.body.classList.add('fade-out');
+                        setTimeout(function () {
+                            // フェードアウトが完了したら別のHTMLファイルを開く
+                            window.location.href = "./index.html";
+                        }, 500); // フェードアウトの時間（ミリ秒）
+                    }
+
+                    else {
+                        timer = setTimeout(function () {
+                            index = 0;
+                        }, wait);
+                    }
+                }
+            });
+        })();
+
+        // 波動拳
+        (function () {
+            'use strict';
+
+            let
+                // 入力受付時間（1.5秒）
+                wait = 200,
+
+                // standby = false の時は入力を受け付けない
+                standby = true,
+
+                // コマンドのキーpコード
+                command2 = [40, 39, 80],
+
+                length = command2.length,
+                index = 0,
+                timer = null;
+
+            document.addEventListener('keydown', function (ev) {
+
+                clearTimeout(timer);
+
+                if (standby && ev.keyCode === command2[index]) {
+                    index++;
+
+                    if (index >= length) {
+                        // standby = false;
+                        index = 0;
+
+                        // 画像をフェードアウトさせる
+                        var img = document.querySelector('img');
+                        img.classList.add('fadeOut');
+
+                        // 全てのコマンドを入力したら何かする
+                    }
+                    else {
+                        timer = setTimeout(function () {
+                            index = 0;
+                        }, wait);
+
+                        // コマンド入力を間違えたらリセット
+                    }
+                } else {
+                    index = 0;
+                }
+            });
+        })();
+    </script>
+
+</body>
+
+</html>
